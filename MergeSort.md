@@ -31,11 +31,24 @@ function mergeSort(arr){
 ```
 
 
-## Ejercicio de la Fila y los sobornos
+## New York Chaos
 ```javascript
-
-
-
-
-
+function newYorkChaos(sortList) {
+  let total = 0;
+  for(let i = 0; i < sortList.length - 1; i++){
+    let j= i + 1;
+    let count = 0; 
+    while(j < sortList.length) {
+      if(sortList[i] > sortList[j]){
+        count++;
+      }          
+      if(count >= 3){
+        return "It´s a chaos!!!";        
+      }
+      j++; 
+    }
+    total += count;  
+  }
+  return total;
+}
 ```
